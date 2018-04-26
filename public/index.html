@@ -102,27 +102,6 @@
                 <div>
                     <img src="http://placehold.it/350x100?text=3">
                 </div>
-                <div>
-                    <img src="http://placehold.it/350x100?text=4">
-                </div>
-                <div>
-                    <img src="http://placehold.it/350x100?text=5">
-                </div>
-                <div>
-                    <img src="http://placehold.it/350x100?text=6">
-                </div>
-                <div>
-                    <img src="http://placehold.it/350x100?text=7">
-                </div>
-                <div>
-                    <img src="http://placehold.it/350x100?text=8">
-                </div>
-                <div>
-                    <img src="http://placehold.it/350x100?text=9">
-                </div>
-                <div>
-                    <img src="http://placehold.it/350x100?text=10">
-                </div>
             </section>
         </div>
 
@@ -249,25 +228,15 @@
                     <button>Проекты</button>
                 </div>
                 <div class="col-6">
-                    <section class="lazy slider" data-sizes="50vw">
+                    <section class="lazy secondSlider slider" data-sizes="50vw">
                         <div>
-                            <img data-lazy="http://placehold.it/350x300?text=1-350w" data-srcset="http://placehold.it/650x300?text=1-650w 650w, http://placehold.it/960x300?text=1-960w 960w" data-sizes="100vw">
+                            <img src="./img/partner1.png" alt="">
                         </div>
                         <div>
-                            <img data-lazy="http://placehold.it/350x300?text=2-350w" data-srcset="http://placehold.it/650x300?text=2-650w 650w, http://placehold.it/960x300?text=2-960w 960w" data-sizes="100vw">
+                            <img src="./img/partner2.png" alt="">
                         </div>
                         <div>
-                            <img data-lazy="http://placehold.it/350x300?text=3-350w"  data-srcset="http://placehold.it/650x300?text=3-650w 650w, http://placehold.it/960x300?text=3-960w 960w" data-sizes="100vw">
-                        </div>
-                        <div>
-                            <img data-lazy="http://placehold.it/350x300?text=4-350w"  data-srcset="http://placehold.it/650x300?text=4-650w 650w, http://placehold.it/960x300?text=4-960w 960w" data-sizes="100vw">
-                        </div>
-                        <div>
-                            <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
-                        </div>
-                        <div>
-                            <!-- this slide should inherit the sizes attr from the parent slider -->
-                            <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
+                            <img src="./img/partner3.png" alt="">
                         </div>
                     </section>
                 </div>
@@ -303,7 +272,32 @@
 
 
     <div class="news">
-
+        <div class="newsSlider">
+            <div class="newsSlider__item">
+                <span class="newsSlider__item__date">14.05.2018</span>
+                <h3 class="newsSlider__item__title">Поставка и монтаж оборудования цеха в селе Алексеевка</h3>
+                <p class="newsSlider__item__text">Равным образом начало повседневной работы по формированию позиции требуют определения.</p>
+                <img src="img/news/1.png" alt="" class="newsSlider__item__image">
+            </div>
+            <div class="newsSlider__item">
+                <span class="newsSlider__item__date">14.05.2018</span>
+                <h3 class="newsSlider__item__title">Поставка и монтаж оборудования цеха в селе Алексеевка</h3>
+                <p class="newsSlider__item__text">Равным образом начало повседневной работы по формированию позиции требуют определения.</p>
+                <img src="img/news/1.png" alt="" class="newsSlider__item__image">
+            </div>
+            <div class="newsSlider__item">
+                <span class="newsSlider__item__date">14.05.2018</span>
+                <h3 class="newsSlider__item__title">Поставка и монтаж оборудования цеха в селе Алексеевка</h3>
+                <p class="newsSlider__item__text">Равным образом начало повседневной работы по формированию позиции требуют определения.</p>
+                <img src="img/news/1.png" alt="" class="newsSlider__item__image">
+            </div>
+            <div class="newsSlider__item">
+                <span class="newsSlider__item__date">14.05.2018</span>
+                <h3 class="newsSlider__item__title">Поставка и монтаж оборудования цеха в селе Алексеевка</h3>
+                <p class="newsSlider__item__text">Равным образом начало повседневной работы по формированию позиции требуют определения.</p>
+                <img src="img/news/1.png" alt="" class="newsSlider__item__image">
+            </div>
+        </div>
     </div>
 
 
@@ -436,59 +430,28 @@
 <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     $(document).on('ready', function() {
-        $(".vertical-center-4").slick({
-            dots: true,
-            vertical: true,
-            centerMode: true,
-            slidesToShow: 4,
-            slidesToScroll: 2
-        });
-        $(".vertical-center-3").slick({
-            dots: true,
-            vertical: true,
-            centerMode: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
-        });
-        $(".vertical-center-2").slick({
-            dots: true,
-            vertical: true,
-            centerMode: true,
-            slidesToShow: 2,
-            slidesToScroll: 2
-        });
         $(".vertical-center").slick({
             dots: true,
             vertical: true,
-            centerMode: true,
-        });
-        $(".vertical").slick({
-            dots: true,
-            vertical: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
-        });
-        $(".regular").slick({
-            dots: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
-        });
-        $(".center").slick({
-            dots: true,
-            infinite: true,
-            centerMode: true,
-            slidesToShow: 5,
-            slidesToScroll: 3
-        });
-        $(".variable").slick({
-            dots: true,
-            infinite: true,
-            variableWidth: true
+            centerMode: false,
+            arrows: false
         });
         $(".lazy").slick({
-            lazyLoad: 'ondemand', // ondemand progressive anticipated
-            infinite: true
+            dots: false,
+            centerMode: false,
+            arrows: true,
+            infinite: true,
+            slidesToShow: 1,
+            fade: true,
+            cssEase: 'linear'
+        });
+        $(".newsSlider").slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            centerMode: true,
+            slidesToShow: 1,
+            centerPadding: '622px'
         });
     });
 </script>

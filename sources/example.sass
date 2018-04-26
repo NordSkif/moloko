@@ -427,7 +427,6 @@ main
 
 .news
   margin: 0px auto
-  background: url('../img/news.png') no-repeat
   width: 1920px
   height: 420px
 
@@ -582,6 +581,114 @@ nav
     height: 70px
     margin-top: 30px
 
+//Стили для первой листалки
+.vertical-center
+  padding-top: 80px
+  .slick-dots
+    right: -33px
+    top: 80px
+    width: 20px
+    li button
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      background-image: none
+      padding: 0
+      box-sizing: border-box
+      border: solid 1px white
+      &:before
+        display: none
+    li.slick-active button
+      background-color: white
+//Конец
+
+
+//Стили второй листалки
+.secondSlider
+  img
+    max-width: 100%
+    position: relative
+    margin: 0 auto
+  .slick-arrow
+    z-index: 3
+  button
+    width: 40px
+    height: 40px
+    border: 4px solid white
+    padding: 0
+    margin: 0
+    border-radius: 50%
+    background-color: #3089c5
+    background-image: url('../img/arrow_right.png')
+    background-position: 50%
+    background-repeat: no-repeat
+    &:before
+      display: none
+  button.slick-next
+    &:hover, &:focus, &:active
+      background-image: url('../img/arrow_right.png')
+      background-color: #3089c5
+      background-position: 50%
+      background-repeat: no-repeat
+  button.slick-prev
+    background-image: url('../img/arrow_left.png')
+    &:hover, &:focus, &:active
+      background-image: url('../img/arrow_left.png')
+      background-color: #3089c5
+      background-position: 50%
+      background-repeat: no-repeat
+//конец
+
+
+//Стили третей листалки
+.newsSlider
+  &__item
+    position: relative
+    color: #FFF
+    padding: 40px
+    margin: 0 15px
+    border-radius: 15px
+    overflow: hidden
+    &__image
+      position: absolute
+      left: 0
+      top: 0
+      z-index: -1
+      width: 100%
+  .slick-slide
+    opacity: 0.25
+    transition: opacity 0.25s ease
+  .slick-slide.slick-active
+    opacity: 1
+  button
+    z-index: 3
+    width: 40px
+    height: 40px
+    border: 4px solid white
+    padding: 0
+    margin: 0
+    border-radius: 50%
+    background-color: #3089c5
+    background-image: url('../img/arrow_right.png')
+    background-position: 50%
+    background-repeat: no-repeat
+    &:before
+      display: none
+  button.slick-next
+    right: 600px
+    &:hover, &:focus, &:active
+      background-image: url('../img/arrow_right.png')
+      background-color: #3089c5
+      background-position: 50%
+      background-repeat: no-repeat
+  button.slick-prev
+    left: 600px
+    background-image: url('../img/arrow_left.png')
+    &:hover, &:focus, &:active
+      background-image: url('../img/arrow_left.png')
+      background-color: #3089c5
+      background-position: 50%
+      background-repeat: no-repeat
 
 
 // Блок подвала
