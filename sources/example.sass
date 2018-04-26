@@ -16,6 +16,47 @@ body
   background-color: #fff
   font-family: $defaultFont
 
+
+
+
+// Хаки и фиксы
+
+.nomargin
+  margin: 0 !important
+
+.nopadding
+  padding: 0 !important
+
+.flex-space-between
+  width: 100%
+  justify-content: space-between
+  flex-direction: row
+  display: flex
+
+// Кнопки
+
+.dashed
+  button
+    border: dashed #3089c5 1px
+    background: #fff url('../img/button-arrow.png') 90% 50% no-repeat
+    padding: 10px 20px
+    font-weight: 600
+    color: #3089c5
+    padding-right: 70px
+    border-radius: 25px
+    margin-top: 10px
+
+.solid
+  button
+    border: none
+    background: #3089c5 url('../img/button-white-arrow.png') 90% 50% no-repeat
+    padding: 10px 20px
+    font-weight: 600
+    color: #fff
+    padding-right: 70px
+    border-radius: 25px
+    margin-top: 10px
+
 // Блок шапки
 
 header
@@ -88,11 +129,13 @@ header
 nav
   background: #eaf5fb url('../img/scan-lines.png') repeat-x
   height: 70px
-  padding: 15px 0px
+  padding: 15px 0
   width: 100%
   font-size: 14px
+  .fix
+    margin-right: -60px
   .col-9
-    padding-right: 0px
+    padding-right: 0
     padding-left: 30px
   .items
     display: -webkit-flex
@@ -122,23 +165,19 @@ main
 
 
 .b-1
-  background: #fff url('../img/b-1.png') no-repeat
-  background-position: right center
+  background: #fff url('../img/b-1.png') right center no-repeat
   width: calc(100% - 10px) !important
   margin-right: 10px
 
 .b-2
-  background: #fff url('../img/b-2.png') no-repeat
-  background-position: right center
+  background: #fff url('../img/b-2.png') right center no-repeat
 
 .b-3
-  background: #fff url('../img/b-3.png') no-repeat
-  background-position: right center
+  background: #fff url('../img/b-3.png') right bottom no-repeat
   width: calc(100% - 10px) !important
 
 .b-4
-  background: #fff url('../img/b-4.png') no-repeat
-  background-position: right center
+  background: #fff url('../img/b-4.png') right bottom no-repeat
   margin-left: 10px
 
 .white-block
@@ -146,15 +185,12 @@ main
   margin-bottom: 10px
   .text-block
     width: 70%
-  button
-    background: #3089c5
-    border-radius: 30px
-    border: none
-    color: #fff
-    padding: 15px 20px
     font-size: 15px
+    font-weight: 550
   span
     font-size: 24px
+    line-height: 28px
+    margin-bottom: 25px
     display: inline-block
     font-weight: 700
 
@@ -171,17 +207,19 @@ main
   display: block
   min-height: 364px
   margin-top: 50px
-
+  max-width: 1330px
+  margin-bottom: -10px
 
 .contur
   position: relative
   display: block
   padding-top: 60px
+
   span
     font-size: 30px
     font-weight: 600
   .perezvonim
-    margin: 30px 0px
+    margin-bottom: 30px
   .politics
     color: #6c7a83
     font-size: 14px
@@ -193,23 +231,33 @@ main
     width: 385px
     height: 412px
     position: absolute
-    right: 0px
+    right: 0
     top: 4px
 
 
 
 
+.blue-bg
+  z-index: 1
+  background: url('../img/pattern.png')
 
 
 .blue
-  z-index: 1
-  background: #3089c5 url('../img/pattern.png')
   position: relative
   display: block
   width: auto
   min-height: 700px
   background-size: cover
   margin-top: -70px
+  &:after
+    content: ""
+    background-color: none
+    background: url('../img/waves.png') repeat-x
+    width: 100%
+    height: 39px
+    display: block
+    right: 0
+    top: -39px
 
 // Блок преимущества
 
@@ -235,7 +283,7 @@ main
     width: 16px
     height: 160px
     position: absolute
-    top: 0px
+    top: 0
     right: 10px
 
 .project
@@ -251,7 +299,7 @@ main
     width: 16px
     height: 160px
     position: absolute
-    top: 0px
+    top: 0
     right: 10px
 
 .postavka
@@ -297,10 +345,10 @@ main
 
 .grey
   background: #efefef
-  padding: 80px 0px
+  padding: 80px 0
   span
     display: block
-    margin: 20px 0px
+    margin: 20px 0
     font-size: 30px
     font-weight: 600
   p
@@ -316,6 +364,16 @@ main
     margin-top: 10px
   .elements
     margin-top: 50px
+    section
+      display: inline-flex
+    figure
+      background: #000000
+      border-radius: 10px
+      img
+        opacity: 0.75
+        width: 100%
+      img:hover
+        opacity: 1.0
     p
       margin: 15px 0
       font-weight: 600

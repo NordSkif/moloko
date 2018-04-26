@@ -16,6 +16,50 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.nomargin {
+  margin: 0 !important;
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+.flex-space-between {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashed button {
+  border: dashed #3089c5 1px;
+  background: #fff url("../img/button-arrow.png") 90% 50% no-repeat;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #3089c5;
+  padding-right: 70px;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
+.solid button {
+  border: none;
+  background: #3089c5 url("../img/button-white-arrow.png") 90% 50% no-repeat;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #fff;
+  padding-right: 70px;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
 header {
   margin: 20px 0;
 }
@@ -118,13 +162,17 @@ header .number:before {
 nav {
   background: #eaf5fb url("../img/scan-lines.png") repeat-x;
   height: 70px;
-  padding: 15px 0px;
+  padding: 15px 0;
   width: 100%;
   font-size: 14px;
 }
 
+nav .fix {
+  margin-right: -60px;
+}
+
 nav .col-9 {
-  padding-right: 0px;
+  padding-right: 0;
   padding-left: 30px;
 }
 
@@ -161,26 +209,22 @@ main {
 }
 
 .b-1 {
-  background: #fff url("../img/b-1.png") no-repeat;
-  background-position: right center;
+  background: #fff url("../img/b-1.png") right center no-repeat;
   width: calc(100% - 10px) !important;
   margin-right: 10px;
 }
 
 .b-2 {
-  background: #fff url("../img/b-2.png") no-repeat;
-  background-position: right center;
+  background: #fff url("../img/b-2.png") right center no-repeat;
 }
 
 .b-3 {
-  background: #fff url("../img/b-3.png") no-repeat;
-  background-position: right center;
+  background: #fff url("../img/b-3.png") right bottom no-repeat;
   width: calc(100% - 10px) !important;
 }
 
 .b-4 {
-  background: #fff url("../img/b-4.png") no-repeat;
-  background-position: right center;
+  background: #fff url("../img/b-4.png") right bottom no-repeat;
   margin-left: 10px;
 }
 
@@ -191,19 +235,14 @@ main {
 
 .white-block .text-block {
   width: 70%;
-}
-
-.white-block button {
-  background: #3089c5;
-  border-radius: 30px;
-  border: none;
-  color: #fff;
-  padding: 15px 20px;
   font-size: 15px;
+  font-weight: 550;
 }
 
 .white-block span {
   font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 25px;
   display: inline-block;
   font-weight: 700;
 }
@@ -221,6 +260,8 @@ main {
   display: block;
   min-height: 364px;
   margin-top: 50px;
+  max-width: 1330px;
+  margin-bottom: -10px;
 }
 
 .contur {
@@ -235,7 +276,7 @@ main {
 }
 
 .contur .perezvonim {
-  margin: 30px 0px;
+  margin-bottom: 30px;
 }
 
 .contur .politics {
@@ -253,19 +294,33 @@ main {
   width: 385px;
   height: 412px;
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 4px;
 }
 
-.blue {
+.blue-bg {
   z-index: 1;
-  background: #3089c5 url("../img/pattern.png");
+  background: url("../img/pattern.png");
+}
+
+.blue {
   position: relative;
   display: block;
   width: auto;
   min-height: 700px;
   background-size: cover;
   margin-top: -70px;
+}
+
+.blue:after {
+  content: "";
+  background-color: none;
+  background: url("../img/waves.png") repeat-x;
+  width: 100%;
+  height: 39px;
+  display: block;
+  right: 0;
+  top: -39px;
 }
 
 .adv {
@@ -294,7 +349,7 @@ main {
   width: 16px;
   height: 160px;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 10px;
 }
 
@@ -312,7 +367,7 @@ main {
   width: 16px;
   height: 160px;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 10px;
 }
 
@@ -362,12 +417,12 @@ main {
 
 .grey {
   background: #efefef;
-  padding: 80px 0px;
+  padding: 80px 0;
 }
 
 .grey span {
   display: block;
-  margin: 20px 0px;
+  margin: 20px 0;
   font-size: 30px;
   font-weight: 600;
 }
@@ -389,6 +444,26 @@ main {
 
 .grey .elements {
   margin-top: 50px;
+}
+
+.grey .elements section {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.grey .elements figure {
+  background: #000000;
+  border-radius: 10px;
+}
+
+.grey .elements figure img {
+  opacity: 0.75;
+  width: 100%;
+}
+
+.grey .elements figure img:hover {
+  opacity: 1.0;
 }
 
 .grey .elements p {
