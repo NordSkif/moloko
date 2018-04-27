@@ -19,6 +19,24 @@ body
 h1
   font-size: 28px
 
+h2
+  font-size: 24px
+
+h3
+  font-size: 21px
+
+h4
+  font-size: 19px
+
+h5
+  font-size: 18px
+
+h6
+  font-size: 16px
+
+button
+  cursor: pointer
+
 /* HTML5 display-role reset for older browsers
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main
@@ -68,7 +86,28 @@ table
 img
   max-width: 100%
 
+.easy
+  display: flex
+  flex: 0 0 50%
+  flex-wrap: wrap
+  max-width: 50%
+  align-items: center
+  align-content: center
+
+.easy
+  p
+    line-height: 21px
+
 // Кнопки
+
+.easy
+  button
+    background: #3089c5
+    border-radius: 30px
+    border: none
+    color: #fff
+    padding: 10px 20px
+    font-size: 15px
 
 .dashed
   button
@@ -100,10 +139,21 @@ img
     font-weight: 600
     color: #fff
     font-size: 16px
-    font-weight: 400
     border-radius: 25px
     margin-top: 30px
     float: right
+    margin-right: 70px
+
+.dashed-blue
+  button
+    border: dashed #3089c5 1px
+    background: none
+    padding: 10px 70px
+    font-weight: 600
+    color: #000
+    font-size: 16px
+    border-radius: 25px
+    margin-top: 30px
     margin-right: 70px
 
 .classic
@@ -117,7 +167,6 @@ img
     font-weight: 400
     border-radius: 25px
     margin-top: 10px
-    float: left
     margin-right: 70px
 
 // Блок шапки
@@ -247,7 +296,7 @@ nav
       content: "\f002"
       font-family: FontAwesome
       font-size: 16px
-      color: #F9F0DA
+      color: #3089c5
 
 
 
@@ -288,6 +337,9 @@ main
 .white-block
   padding: 45px
   margin-bottom: 10px
+  button
+    margin-top: 10px
+    display: block
   .text-block
     width: 70%
     font-size: 15px
@@ -315,6 +367,10 @@ main
   max-width: 1330px
   margin-bottom: -10px
 
+.perezvonim
+  padding: 15px 0px
+  margin-bottom: 0px
+
 .contur
   position: relative
   display: block
@@ -324,12 +380,13 @@ main
     font-size: 30px
     font-weight: 600
   .perezvonim
+    padding: 15px 0px
     margin-bottom: 30px
   .politics
     color: #6c7a83
     font-size: 14px
   .butfix
-    margin-top: 32px
+    margin-top: 22px
   &:before
     content: ""
     background: url('../img/pivo.png') no-repeat
@@ -507,7 +564,7 @@ main
     color: #6c7a83
     font-size: 14px
   .butfix
-    margin-top: 32px
+    margin-top: 22px
   &:before
     content: ""
     background: url('../img/man.png') no-repeat
@@ -521,7 +578,7 @@ main
   margin: 0px auto
   width: 1920px
   height: 420px
-  margin-bottom: 120px
+  margin-bottom: 70px
   span
     display: block
     margin: 40px 0px
@@ -757,6 +814,10 @@ footer
     transition: opacity 0.25s ease
   .slick-slide.slick-active
     opacity: 1
+    z-index: 999
+    //-webkit-box-shadow: 0px 60px 81px -6px rgba(0,0,0,0.19)
+    //-moz-box-shadow: 0px 60px 81px -6px rgba(0,0,0,0.19)
+    //box-shadow: 0px 60px 81px -6px rgba(0,0,0,0.19)
   button
     z-index: 3
     width: 40px
@@ -803,7 +864,7 @@ footer
   font-size: 15px
   color: #338bc6
   a
-    color: #338bc6
+    color: #40a0e0 !important
     font-weight: 600
 
 .sertificate
@@ -812,6 +873,8 @@ footer
     margin: 30px 0px
   img
     max-width: 100%
+  .breadcrumbs
+    margin: 30px 0px
 
 .footer-forma-in:before
   height: 399px
@@ -852,6 +915,10 @@ footer
     margin-bottom: 30px
   nav
     background: none
+  article:hover
+    -webkit-box-shadow: inset 8px 20px 75px -22px rgba(0,0,0,0.16)
+    -moz-box-shadow: inset 8px 20px 75px -22px rgba(0,0,0,0.16)
+      box-shadow: inset 8px 20px 75px -22px rgba(0,0,0,0.16)
   article
     background: #fff
     padding: 20px
@@ -865,6 +932,8 @@ footer
       font-size: 16px
       border-bottom: 2px dashed #338bc6
       margin-left: 60px
+    .more:hover
+        text-decoration: none
     figure
       width: 25%
       float: left
@@ -929,14 +998,6 @@ footer
   background: #000 url('../img/category.png') no-repeat
   color: #fff
   min-height: 450px
-  button
-    background: #3089c5
-    border-radius: 30px
-    border: none
-    color: #fff
-    padding: 10px 20px
-    font-size: 15px
-    margin-top: 10px
   h1
     font-size: 34px
     line-height: 38px
@@ -1073,6 +1134,12 @@ content
   display: flex
   align-items: center
   font-size: 16px
+  a
+    border-bottom: 2px dashed #40a0e0
+  a:hover
+    text-decoration: none
+    color: #000
+    border-bottom: 2px dashed #000
   &:after
     content: ""
     background: url('../img/file-download.png') no-repeat
@@ -1086,6 +1153,14 @@ content
 // СТРАНИЦА О КОМПАНИИ
 
 .aboute
+  .secondSlider button.slick-prev
+    left: 55px
+
+  .secondSlider button.slick-next
+    right: 55px
+  .slick-dotted.slick-slider
+    margin-bottom: 0px
+    margin-right: -40px
   .fix
     margin-top: 0px
     padding-top: 0px
@@ -1107,6 +1182,44 @@ content
       line-height: 22px
       font-size: 15px
       font-weight: 550
+
+// СТРАНИЦА УСЛУГИ
+
+.usluga
+  .fix
+    padding-left: 80px
+    &:before
+      content: ""
+      background: url('../img/devide.png') no-repeat
+      width: 18px
+      height: 480px
+      display: block
+      position: absolute
+      top: 60px
+      left: 35px
+
+  button
+    margin-left: 20px
+    margin-top: 10px
+    margin-bottom: 30px
+  p
+    margin-left: 20px
+    line-height: 21px
+  span
+    font-size: 24px
+    font-weight: 600
+    margin-left: 20px
+    margin-top: 10px
+    margin-bottom: 20px
+    display: block
+  h1
+    margin-bottom: 40px
+    display: block
+  section
+    padding: 0px
+
+    img
+      margin: 0px
 
 // АККОРДЕОН
 
@@ -1132,7 +1245,7 @@ content
   label, a
     position: relative
     display: block
-    padding: 18px 18px 18px 64px
+    padding: 18px 18px 18px 34px
     background: #3089c5
     box-shadow: inset 0 -1px #555960
     color: #ffffff
@@ -1140,7 +1253,6 @@ content
 
 .no-touch .cd-accordion-menu
   label:hover, a:hover
-    background: #52565d
 
 .cd-accordion-menu
   label
@@ -1151,8 +1263,10 @@ content
       display: inline-block
       width: 16px
       height: 16px
+      padding: 5px
       position: absolute
       top: 50%
+      right: 10%
       -webkit-transform: translateY(-50%)
       -moz-transform: translateY(-50%)
       -ms-transform: translateY(-50%)
@@ -1164,6 +1278,7 @@ content
     display: inline-block
     width: 16px
     height: 16px
+
     position: absolute
     top: 50%
     -webkit-transform: translateY(-50%)
@@ -1210,10 +1325,12 @@ content
       box-shadow: inset 0 -1px #41444a
       padding-left: 82px
       color: #000000
+    label, a:hover
+      background: #eaf3f9
 
 .no-touch .cd-accordion-menu ul
   label:hover, a:hover
-    background: #3c3f45
+    background: #eaf3f9
 
 .cd-accordion-menu
   > li
@@ -1260,16 +1377,16 @@ content
 @media only screen and (min-width: 600px)
   .cd-accordion-menu
     label, a
-      padding: 24px 24px 24px 82px
+      padding: 24px 24px 24px 22px
       font-size: 16px
     label
       &::before
-        left: 24px
+
       &::after
         left: 53px
     ul
       label, a
-        padding-left: 106px
+        padding-left: 22px
       label
         &::before
           left: 48px
@@ -1297,3 +1414,27 @@ content
               left: 125px
           a::after
             left: 125px
+
+.card-header
+  padding: .75rem 1.25rem
+  margin-bottom: 0
+  background: none !important
+  border-bottom: 1px solid rgba(0,0,0,.125)
+.card
+  border: none !important
+
+.pagination
+  display: flex !important
+  padding-left: 0 !important
+  margin-top: 0rem !important
+  margin-bottom: 0rem !important
+  border-radius: 0 !important
+
+.breadcrumb
+  a
+    color: #40a0e0 !important
+    font-weight: 600
+
+.solid
+  p
+    line-height: 21px
