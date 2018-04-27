@@ -16,13 +16,45 @@ body
   background-color: #fff
   font-family: $defaultFont
 
+h1
+  font-size: 28px
 
+/* HTML5 display-role reset for older browsers
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main
+  display: block
+
+body
+  line-height: 1
+  font-size: 15px
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
 
 // Хаки и фиксы
 
 .nomargin
   margin: 0 !important
+
+.margin20
+  margin: 0 -20px
 
 .nopadding
   padding: 0 !important
@@ -32,6 +64,9 @@ body
   justify-content: space-between
   flex-direction: row
   display: flex
+
+img
+  max-width: 100%
 
 // Кнопки
 
@@ -56,6 +91,34 @@ body
     padding-right: 70px
     border-radius: 25px
     margin-top: 10px
+
+.dashed-white
+  button
+    border: dashed #fff 1px
+    background: none
+    padding: 10px 70px
+    font-weight: 600
+    color: #fff
+    font-size: 16px
+    font-weight: 400
+    border-radius: 25px
+    margin-top: 30px
+    float: right
+    margin-right: 70px
+
+.classic
+  button
+    border: solid #3089c5 1px
+    background: none
+    padding: 10px 70px
+    font-weight: 600
+    color: #000
+    font-size: 16px
+    font-weight: 400
+    border-radius: 25px
+    margin-top: 10px
+    float: left
+    margin-right: 70px
 
 // Блок шапки
 
@@ -114,6 +177,9 @@ header
       position: absolute
       left: -15px
       top: 4px
+  .zvonok
+    button
+      float: right
   .number
     font-size: 20px
     font-weight: 700
@@ -126,12 +192,15 @@ header
       left: -15px
       top: 4px
 
+// Блок навигации
+
 nav
   background: #eaf5fb url('../img/scan-lines.png') repeat-x
   height: 70px
   padding: 15px 0
   width: 100%
   font-size: 14px
+  font-weight: 600
   .fix
     margin-right: -60px
   .col-9
@@ -148,6 +217,39 @@ nav
   .items:last-child
     border: none
     padding-right: 0
+  form
+    position: relative
+    width: 100%
+    margin: 0 auto
+    border-radius: 30px
+    background: #ffffff
+
+  input, button
+    border: none
+    outline: none
+    background: transparent
+
+  input
+    width: 100%
+    height: 42px
+    padding-left: 15px
+
+  button
+    height: 42px
+    width: 42px
+    position: absolute
+    top: 0
+    right: 0
+    cursor: pointer
+
+  button
+    &:before
+      content: "\f002"
+      font-family: FontAwesome
+      font-size: 16px
+      color: #F9F0DA
+
+
 
 .first-line
   .col-7
@@ -161,6 +263,9 @@ main
   background: url('../img/green.png') no-repeat
   width: 100%
   background-size: contain
+  padding-bottom: 60px
+
+
 
 
 
@@ -235,12 +340,11 @@ main
     top: 4px
 
 
-
+// Синий блок
 
 .blue-bg
   z-index: 1
   background: url('../img/pattern.png')
-
 
 .blue
   position: relative
@@ -248,7 +352,7 @@ main
   width: auto
   min-height: 700px
   background-size: cover
-  margin-top: -70px
+  margin-top: -45px
   &:after
     content: ""
     background-color: none
@@ -345,7 +449,7 @@ main
 
 .grey
   background: #efefef
-  padding: 80px 0
+  padding: 25px 0
   span
     display: block
     margin: 20px 0
@@ -374,26 +478,14 @@ main
         width: 100%
       img:hover
         opacity: 1.0
+        -webkit-box-shadow: 0px 50px 69px -28px rgba(0,0,0,0.19)
+        -moz-box-shadow: 0px 50px 69px -28px rgba(0,0,0,0.19)
+        box-shadow: 0px 50px 69px -28px rgba(0,0,0,0.19)
     p
       margin: 15px 0
       font-weight: 600
     .row-2
       align-content: space-between
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer-bg
   background: url('../img/footer-forma-bg.png') no-repeat center top
@@ -410,7 +502,7 @@ main
     font-size: 30px
     font-weight: 600
   .perezvonim
-    margin: 30px 0px
+    margin: 0px 0px
   .politics
     color: #6c7a83
     font-size: 14px
@@ -429,10 +521,12 @@ main
   margin: 0px auto
   width: 1920px
   height: 420px
-
-
-
-
+  margin-bottom: 120px
+  span
+    display: block
+    margin: 40px 0px
+    font-size: 30px
+    font-weight: 600
 
 .partners
   border-top: 1px solid #d3d3d3
@@ -453,41 +547,6 @@ main
   justify-content: space-between
   flex-direction: row
   display: flex
-
-nav
-  font-weight: 600
-  form
-    position: relative
-    width: 100%
-    margin: 0 auto
-    border-radius: 30px
-    background: #ffffff
-
-  input, button
-    border: none
-    outline: none
-    background: transparent
-
-  input
-    width: 100%
-    height: 42px
-    padding-left: 15px
-
-
-  button
-    height: 42px
-    width: 42px
-    position: absolute
-    top: 0
-    right: 0
-    cursor: pointer
-
-  button
-    &:before
-      content: "\f002"
-      font-family: FontAwesome
-      font-size: 16px
-      color: #F9F0DA
 
 // Копия шапки перед подвалом
 
@@ -541,9 +600,12 @@ nav
   .mail
     position: relative
     font-size: 15px
+    a:hover
+      text-decoration: none
+      border-bottom: 1px dashed #fff
     &:before
       content: ""
-      background: url('../img/mail.png') no-repeat
+      background: url('../img/footer-mail.png') no-repeat
       width: 22px
       height: 22px
       position: absolute
@@ -553,9 +615,12 @@ nav
     position: relative
     font-size: 15px
     margin-left: 40px
+    a:hover
+      text-decoration: none
+      border-bottom: 1px dashed #fff
     &:before
       content: ""
-      background: url('../img/location-arrow.png') no-repeat
+      background: url('../img/footer-location-arrow.png') no-repeat
       width: 22px
       height: 22px
       position: absolute
@@ -567,7 +632,7 @@ nav
     color: #fff
     &:before
       content: ""
-      background: url('../img/phone.png') no-repeat
+      background: url('../img/footer-phone.png') no-repeat
       width: 22px
       height: 22px
       position: absolute
@@ -577,15 +642,40 @@ nav
     background: url('../img/footer-logo.png') no-repeat
     background-size: contain
     width: 100%
-    min-width: 290px
+    width: 240px
     height: 70px
-    margin-top: 30px
+    margin-top: 60px
+
+// Блок подвала
+
+footer
+  background: #000000
+  color: #fff
+  line-height: 50px
+  font-size: 15px
+  a
+    margin-left: 50px
+  .copyright
+    text-align: right
+    color: #cbcbcb
 
 //Стили для первой листалки
+
 .vertical-center
-  padding-top: 80px
+  padding: 80px 0
+  font-size: 18px
+  color: #fff
+  .block
+    display: block
+    float: left
+    width: 50%
+  span
+    line-height: 44px
+    font-weight: 300
+    font-size: 42px
+    margin-top: 15px
   .slick-dots
-    right: -33px
+    right: 0px
     top: 80px
     width: 20px
     li button
@@ -600,10 +690,11 @@ nav
         display: none
     li.slick-active button
       background-color: white
+
 //Конец
 
-
 //Стили второй листалки
+
 .secondSlider
   img
     max-width: 100%
@@ -637,10 +728,11 @@ nav
       background-color: #3089c5
       background-position: 50%
       background-repeat: no-repeat
+
 //конец
 
-
 //Стили третей листалки
+
 .newsSlider
   &__item
     position: relative
@@ -655,6 +747,11 @@ nav
       top: 0
       z-index: -1
       width: 100%
+    &__image:hover
+      -webkit-box-shadow: 0px 50px 69px -28px rgba(0,0,0,0.19)
+      -moz-box-shadow: 0px 50px 69px -28px rgba(0,0,0,0.19)
+      box-shadow: 0px 50px 69px -28px rgba(0,0,0,0.19)
+
   .slick-slide
     opacity: 0.25
     transition: opacity 0.25s ease
@@ -691,9 +788,512 @@ nav
       background-repeat: no-repeat
 
 
-// Блок подвала
 
-footer
-  background: #000000
+// СТИЛИ ВНУТРЕННИХ СТРАНИЦ
+
+// СТРАНИЦА СЕРТИФИКАТОВ
+
+.serost
+  background-color: #efefef
+
+.breadcrumb
+  min-width: 200px !important
+  background: none
+  margin-top: 30px
+  font-size: 15px
+  color: #338bc6
+  a
+    color: #338bc6
+    font-weight: 600
+
+.sertificate
+  font-size: 15px
+  p
+    margin: 30px 0px
+  img
+    max-width: 100%
+
+.footer-forma-in:before
+  height: 399px
+
+// СТРАНИЦА НОВОСТЕЙ
+
+.pagination
+  a
+    color: #373737 !important
+    text-decoration: underline
+  .page-link
+    font-size: 16px
+    position: relative
+    display: block
+    padding: 0.5rem 0.75rem
+    margin-left: -1px
+    line-height: 1.25
+    color: #007bff
+    background: none
+    border: none
+
+.page-item.disabled .page-link
+  background: none
+
+.page-item.active .page-link
+  z-index: 1
+  border-radius: 10px
+  text-decoration: none
+  color: #fff !important
+  background-color: #3089c5
+
+.page-item.active .page-link a
+  text-decoration: none
+  color: #fff !important
+
+.newspage
+  h1
+    margin-bottom: 30px
+  nav
+    background: none
+  article
+    background: #fff
+    padding: 20px
+    font-size: 15px
+    display: block
+    float: left
+    margin-bottom: 30px
+    date
+      color: #535353
+    .more
+      font-size: 16px
+      border-bottom: 2px dashed #338bc6
+      margin-left: 60px
+    figure
+      width: 25%
+      float: left
+      margin: 0px
+      padding: 0px
+    section
+      width: 72.5%
+      margin-left: 2.5%
+      float: left
+      font-weight: 600
+      line-height: 24px
+    span
+      font-size: 22px
+      margin-bottom: 20px
+      margin-top: 15px
+      display: block
+
+// СТРАНИЦА ВАКАНСИЙ
+
+.bayan
+  padding: 20px
+  background: #fff
+  max-width: 1100px
+
+.card-header
+  background: none
+
+.card
+  border: none
+
+.card-body
+  font-size: 15px
+
+.bayan
+  h5
+    font-size: 18px
+    font-weight: 600
+  .btn
+    background: url('../img/left.png') no-repeat
+    background-size: contain
+    height: 26px
+    width: 26px
+    float: right
+
+// СТРАНИЦА КАТОЛОГА
+
+.catalog
+  p
+    background: #fff
+    padding: 20px
+  figure
+    margin-bottom: 0px
+    img
+      max-width: 100%
+
+.catalog-article
+  margin-top: 40px
+
+// СТРАНИЦА КАТЕГОРИИ
+
+.subheader
+  background: #000 url('../img/category.png') no-repeat
   color: #fff
-  line-height: 50px
+  min-height: 450px
+  button
+    background: #3089c5
+    border-radius: 30px
+    border: none
+    color: #fff
+    padding: 10px 20px
+    font-size: 15px
+    margin-top: 10px
+  h1
+    font-size: 34px
+    line-height: 38px
+    font-weight: 700
+    margin-bottom: 10px
+  .breadcrumb-item
+    color: #fff
+  .pagination a
+    color: #c2c2c5 !important
+
+.advantages
+  background: #FFFFFF
+  min-height: 130px
+  display: flex
+  margin-bottom: 30px
+  .row
+    height: 100%
+  .col-4
+    display: flex
+    align-items: center
+    justify-content: space-around
+    flex-direction: row
+    flex-wrap: nowrap
+    flex-basis: 33.333333333333%
+
+.adv1
+  border-right: 1px solid #efefef
+  span
+    font-weight: 600
+    display: flex
+    align-items: center
+    &:before
+      content: ""
+      background: url('../img/adv1.png') no-repeat
+      width: 70px
+      height: 70px
+      display: block
+      float: left
+      margin-right: 20px
+      top: 0px
+
+.adv2
+  border-right: 1px solid #efefef
+  span
+    font-weight: 600
+    display: flex
+    align-items: center
+    &:before
+      content: ""
+      background: url('../img/adv2.png') no-repeat
+      width: 70px
+      height: 70px
+      display: block
+      float: left
+      margin-right: 20px
+      top: 0px
+
+.adv3
+  span
+    font-weight: 600
+    display: flex
+    align-items: center
+    &:before
+      content: ""
+      background: url('../img/adv3.png') no-repeat
+      width: 70px
+      height: 70px
+      display: block
+      float: left
+      margin-right: 20px
+      top: 0px
+
+content
+  img
+    max-width: 100%
+
+.category-item
+  background: #fff
+  margin-bottom: 30px
+  span
+    display: block
+    margin-bottom: 15px
+    font-weight: 700
+    line-height: 22px
+  p
+    font-size: 14px
+  .price
+    font-size: 24px
+    color: #2772a4
+    font-weight: 600
+  button
+    background: #3089c5
+    border-radius: 5px
+    border: none
+    color: #fff
+    padding: 10px 20px
+    font-size: 15px
+    width: 100%
+  section
+    padding: 20px
+
+// СТРАНИЦА ТОВАРА
+
+.tovar
+  article
+    p
+      font-size: 15px
+      line-height: 22px
+  h1, h2
+    font-size: 28px
+    margin-bottom: 20px
+  table
+    margin: 30px 0px
+    background: #fcfcfc
+    line-height: 27px
+    border-radius: 10px !important
+    font-weight: 400
+    border-radius: 10px !important
+  tr
+    font-weight: 400
+
+  thead
+    background: #3089c5
+    font-size: 18px
+    font-weight: 600
+    color: #FFFFFF
+    padding: 20px
+    border-radius: 10px !important
+    tr
+      border-radius: 10px !important
+
+.file-download
+  font-weight: 600
+  display: flex
+  align-items: center
+  font-size: 16px
+  &:after
+    content: ""
+    background: url('../img/file-download.png') no-repeat
+    width: 17px
+    height: 21px
+    display: block
+    float: left
+    margin-left: 20px
+    top: 0px
+
+// СТРАНИЦА О КОМПАНИИ
+
+.aboute
+  .fix
+    margin-top: 0px
+    padding-top: 0px
+  article
+    margin-top: 30px
+    padding: 20px 0px
+    line-height: 22px
+    font-size: 15px
+    font-weight: 550
+    h1, h2
+      font-size: 28px
+      margin-bottom: 20px
+
+  .white
+    background: #fff
+    article
+      margin-top: 0px
+      padding: 20px
+      line-height: 22px
+      font-size: 15px
+      font-weight: 550
+
+// АККОРДЕОН
+
+.cd-accordion-menu
+  width: 100%
+  max-width: 600px
+  background: #ffffff
+  border-radius: 10px
+  ul
+    /* by default hide all sub menus
+    display: none
+    border-radius: 10px
+  li
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+  input[type=checkbox]
+    /* hide native checkbox
+    position: absolute
+    opacity: 0
+  label, a
+    position: relative
+    display: block
+    padding: 18px 18px 18px 64px
+    background: #3089c5
+    box-shadow: inset 0 -1px #555960
+    color: #ffffff
+    font-size: 16зч
+
+.no-touch .cd-accordion-menu
+  label:hover, a:hover
+    background: #52565d
+
+.cd-accordion-menu
+  label
+    margin-bottom: 1px
+    &::before, &::after
+      /* icons
+      content: ''
+      display: inline-block
+      width: 16px
+      height: 16px
+      position: absolute
+      top: 50%
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+  a::after
+    /* icons
+    content: ''
+    display: inline-block
+    width: 16px
+    height: 16px
+    position: absolute
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
+  label
+    cursor: pointer
+    &::before, &::after
+      background-image: url(../img/cd-icons.svg)
+      background-repeat: no-repeat
+    &::before
+      /* arrow icon
+      right: 18px
+      background-position: 0 0
+      -webkit-transform: translateY(-50%) rotate(-90deg)
+      -moz-transform: translateY(-50%) rotate(-90deg)
+      -ms-transform: translateY(-50%) rotate(-90deg)
+      -o-transform: translateY(-50%) rotate(-90deg)
+      transform: translateY(-50%) rotate(-90deg)
+    &::after
+      display: none
+  a::after
+    display: none
+  input[type=checkbox]:checked + label
+    &::before
+      /* rotate arrow
+      -webkit-transform: translateY(-50%)
+      -moz-transform: translateY(-50%)
+      -ms-transform: translateY(-50%)
+      -o-transform: translateY(-50%)
+      transform: translateY(-50%)
+    &::after
+      /* show open folder icon if item is checked
+      background-position: -32px 0
+    + ul, &:nth-of-type(n) + ul
+      /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors
+      /* show children when item is checked
+      display: block
+  ul
+    label, a
+      background: #fff
+      box-shadow: inset 0 -1px #41444a
+      padding-left: 82px
+      color: #000000
+
+.no-touch .cd-accordion-menu ul
+  label:hover, a:hover
+    background: #3c3f45
+
+.cd-accordion-menu
+  > li
+    &:last-of-type >
+    label, a
+      box-shadow: none
+    > ul > li:last-of-type
+      label, a
+        box-shadow: none
+  ul
+    label
+      &::before
+        left: 36px
+      &::after
+        left: 59px
+    a::after
+      left: 59px
+    ul
+      label, a
+        padding-left: 100px
+      label
+        &::before
+          left: 54px
+        &::after
+          left: 77px
+      a::after
+        left: 77px
+      ul
+        label, a
+          padding-left: 118px
+        label
+          &::before
+            left: 72px
+          &::after
+            left: 95px
+        a::after
+          left: 95px
+  &.animated label::before
+    /* this class is used if you're using jquery to animate the accordion
+    -webkit-transition: -webkit-transform 0.3s
+    -moz-transition: -moz-transform 0.3s
+    transition: transform 0.3s
+
+@media only screen and (min-width: 600px)
+  .cd-accordion-menu
+    label, a
+      padding: 24px 24px 24px 82px
+      font-size: 16px
+    label
+      &::before
+        left: 24px
+      &::after
+        left: 53px
+    ul
+      label, a
+        padding-left: 106px
+      label
+        &::before
+          left: 48px
+        &::after
+          left: 77px
+      a::after
+        left: 77px
+      ul
+        label, a
+          padding-left: 130px
+        label
+          &::before
+            left: 72px
+          &::after
+            left: 101px
+        a::after
+          left: 101px
+        ul
+          label, a
+            padding-left: 154px
+          label
+            &::before
+              left: 96px
+            &::after
+              left: 125px
+          a::after
+            left: 125px
